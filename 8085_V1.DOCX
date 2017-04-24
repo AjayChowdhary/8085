@@ -1,0 +1,98 @@
+
+<!-- saved from url=(0067)file:///C:/Users/AJAY%20CHOWDHARY/Desktop/8085final_v1/8085_V1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body><b>Partlist exported from C:/Users/AJAY CHOWDHARY/Desktop/8085final_v1/8085_V1.sch at 29-03-2017 02:16</b>
+<p>
+<table>
+<tbody><tr><td><b>Part</b></td><td><b>Value</b></td><td><b>Device</b></td><td><b>Package</b></td><td><b>Description</b></td><td><b>MF</b></td><td><b>MPN</b></td><td><b>OC_FARNELL</b></td><td><b>OC_NEWARK</b></td><td><b>PACKAGE</b></td><td><b>SUPPLIER</b></td></tr>
+<tr><td>8085</td><td></td><td>8085</td><td>DIL40</td><td>MICROCOMPUTER/PERIPHERAL DEVICE</td><td></td><td></td><td>unknown</td><td>unknown</td><td></td><td></td></tr>
+<tr><td>8255</td><td></td><td>8255A</td><td>DIL40</td><td>MICROCOMPUTER/PERIPHERAL DEVICE</td><td></td><td></td><td>unknown</td><td>unknown</td><td></td><td></td></tr>
+<tr><td>ADC-1</td><td>ADS7842(12-ADC)</td><td>ADS7842(12-ADC)</td><td>SSOP28</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>AD_LATCH</td><td>74HC573N</td><td>74HC573N</td><td>DIL20</td><td>8-bit D latch BUS DRIVER</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>CHANGE</td><td></td><td>10-XX</td><td>B3F-10XX</td><td>OMRON SWITCH</td><td></td><td>B3F-1000</td><td>176432</td><td>36M3542</td><td></td><td></td></tr>
+<tr><td>C_1</td><td></td><td>CAPACITOR-NON_POLAR025-025X050</td><td>C025-025X050</td><td>CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>C_2</td><td></td><td>CAPACITOR-POLARE2.5-5</td><td>E2,5-5</td><td>POLARIZED CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>C_3</td><td></td><td>C-EU025-025X050</td><td>C025-025X050</td><td>CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>C_4</td><td></td><td>C-EU025-025X050</td><td>C025-025X050</td><td>CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>C_5</td><td></td><td>C-EU025-025X050</td><td>C025-025X050</td><td>CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>C_6</td><td></td><td>C-EU025-025X050</td><td>C025-025X050</td><td>CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>C_7</td><td></td><td>C-EU025-025X050</td><td>C025-025X050</td><td>CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>C_8</td><td></td><td>C-EU025-024X044</td><td>C025-024X044</td><td>CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>C_9</td><td></td><td>C-EU025-024X044</td><td>C025-024X044</td><td>CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>C_11</td><td></td><td>C-EU025-024X044</td><td>C025-024X044</td><td>CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>C_12</td><td></td><td>CAPACITOR-POLARE2.5-5</td><td>E2,5-5</td><td>POLARIZED CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>C_13</td><td></td><td>C-EU025-024X044</td><td>C025-024X044</td><td>CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>C_14</td><td></td><td>C-EU025-024X044</td><td>C025-024X044</td><td>CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>C_15</td><td></td><td>C-EU025-024X044</td><td>C025-024X044</td><td>CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>C_16</td><td></td><td>C-EU025-025X050</td><td>C025-025X050</td><td>CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>C_17</td><td></td><td>C-EU025-024X044</td><td>C025-024X044</td><td>CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>C_18</td><td></td><td>C-EU025-025X050</td><td>C025-025X050</td><td>CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>C_20</td><td></td><td>C-EU025-025X050</td><td>C025-025X050</td><td>CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>C_21</td><td></td><td>C-EU025-024X044</td><td>C025-024X044</td><td>CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>DECODER</td><td>74HCT138N</td><td>74HCT138N</td><td>DIL16</td><td>3-line to 8-line DECODER/DEMULTIPLEXER</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>FINGERLED</td><td>KBREVMTNLED</td><td>KBREVMTNLED</td><td>KBREVMNTLED</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>GND</td><td>M01SMDNS</td><td>M01SMDNS</td><td>1X01NS</td><td>Header 1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>HC1</td><td>2.2uf</td><td>C-USC0402</td><td>C0402</td><td>CAPACITOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>HC2</td><td>4.7uf</td><td>C-USC0402</td><td>C0402</td><td>CAPACITOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>HC3</td><td>4.7uf</td><td>C-USC0402</td><td>C0402</td><td>CAPACITOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>HC4</td><td>2.2uf</td><td>C-USC0402</td><td>C0402</td><td>CAPACITOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>HC5</td><td>4.7uf</td><td>C-USC0402</td><td>C0402</td><td>CAPACITOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>HEART_PULSE</td><td>M01SMDNS</td><td>M01SMDNS</td><td>1X01NS</td><td>Header 1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>HR2</td><td>100k</td><td>R-US_R0402</td><td>R0402</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>HR3</td><td>100k</td><td>R-US_R0402</td><td>R0402</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>HR4</td><td>12k</td><td>R-US_R0402</td><td>R0402</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>HR5</td><td>470</td><td>R-US_R0402</td><td>R0402</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>HR6</td><td>3.3m</td><td>R-US_R0402</td><td>R0402</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>HRCOM</td><td></td><td>R-US_0204/7</td><td>0204/7</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>H_R1</td><td>10k</td><td>R-US_R0402</td><td>R0402</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>IC1</td><td>7404N</td><td>7404N</td><td>DIL14</td><td>Hex INVERTER</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>IC2</td><td>7432N</td><td>7432N</td><td>DIL14</td><td>Quad 2-input OR gate</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>IC3</td><td>74HCT74N</td><td>74HCT74N</td><td>DIL14</td><td>Dual D type positive edge triggered FLIP FLOP, preset and clear</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>LCD1</td><td></td><td>16X2LCD</td><td>16X2_LCD</td><td>ALPHANUMERIC-LCD</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>LED1</td><td></td><td>LEDCHIP-LED0603</td><td>CHIP-LED0603</td><td>LED</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>LM35_PORT</td><td></td><td>M03</td><td>03P</td><td>AMP QUICK CONNECTOR</td><td></td><td></td><td>unknown</td><td>unknown</td><td></td><td></td></tr>
+<tr><td>LM358</td><td>LM358N</td><td>LM358N</td><td>DIL08</td><td>OP AMP also LM158; LM258; LM2904</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>OUT1</td><td>M01SMDNS</td><td>M01SMDNS</td><td>1X01NS</td><td>Header 1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>POW_LED</td><td>LED3MM</td><td>LED3MM</td><td>LED3MM</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>PULSE</td><td>M01SMDNS</td><td>M01SMDNS</td><td>1X01NS</td><td>Header 1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Q1</td><td></td><td>CRYSTALHC49US</td><td>HC49US</td><td>Crystals</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>R9</td><td></td><td>POTENTIOMETER_PT-10</td><td>PT-10</td><td>Potentiometer</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>RAM-62256P</td><td></td><td>62256P</td><td>DIL28-6</td><td>MEMORY</td><td></td><td></td><td>unknown</td><td>unknown</td><td></td><td></td></tr>
+<tr><td>RE_SWI</td><td></td><td>10-XX</td><td>B3F-10XX</td><td>OMRON SWITCH</td><td></td><td>B3F-1000</td><td>176432</td><td>36M3542</td><td></td><td></td></tr>
+<tr><td>ROM1</td><td>EEPROM_ZIF</td><td>EEPROM_ZIF</td><td>DIL28-6-ZIF_SOCKET</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>R_1</td><td></td><td>R-US_0204/7</td><td>0204/7</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>R_2</td><td></td><td>R-US_0204/7</td><td>0204/7</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>R_3</td><td></td><td>R-US_0204/7</td><td>0204/7</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>R_4</td><td></td><td>R-US_0204/7</td><td>0204/7</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>R_5</td><td></td><td>R-US_0204/7</td><td>0204/7</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>R_6</td><td></td><td>R-US_0204/7</td><td>0204/7</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>R_7</td><td></td><td>R-US_0204/7</td><td>0204/7</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>R_8</td><td></td><td>R-US_0204/7</td><td>0204/7</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>R_9</td><td></td><td>R-US_0204/7</td><td>0204/7</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>R_10</td><td></td><td>R-US_0204/7</td><td>0204/7</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>R_14</td><td></td><td>R-US_0204/7</td><td>0204/7</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>R_15</td><td></td><td>R-US_0204/7</td><td>0204/7</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>R_16</td><td></td><td>RESISTOR0207/7</td><td>0207/7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>R_17</td><td></td><td>R-US_0204/7</td><td>0204/7</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>R_18</td><td>10k</td><td>R-US_0204/7</td><td>0204/7</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>R_19</td><td>68k</td><td>R-US_0204/7</td><td>0204/7</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>R_20</td><td>22k</td><td>R-US_0204/7</td><td>0204/7</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>SID_SWI</td><td></td><td>10-XX</td><td>B3F-10XX</td><td>OMRON SWITCH</td><td></td><td>B3F-1000</td><td>176432</td><td>36M3542</td><td></td><td></td></tr>
+<tr><td>SL1</td><td></td><td>M10</td><td>10P</td><td>AMP QUICK CONNECTOR</td><td></td><td></td><td>unknown</td><td>unknown</td><td></td><td></td></tr>
+<tr><td>SL2</td><td></td><td>M10</td><td>10P</td><td>AMP QUICK CONNECTOR</td><td></td><td></td><td>unknown</td><td>unknown</td><td></td><td></td></tr>
+<tr><td>SL3</td><td></td><td>M10</td><td>10P</td><td>AMP QUICK CONNECTOR</td><td></td><td></td><td>unknown</td><td>unknown</td><td></td><td></td></tr>
+<tr><td>SL4</td><td></td><td>M10</td><td>10P</td><td>AMP QUICK CONNECTOR</td><td></td><td></td><td>unknown</td><td>unknown</td><td></td><td></td></tr>
+<tr><td>SL5</td><td></td><td>M14</td><td>14P</td><td>AMP QUICK CONNECTOR</td><td></td><td></td><td>unknown</td><td>unknown</td><td></td><td></td></tr>
+<tr><td>SL6</td><td></td><td>M14</td><td>14P</td><td>AMP QUICK CONNECTOR</td><td></td><td></td><td>unknown</td><td>unknown</td><td></td><td></td></tr>
+<tr><td>SLIDE</td><td>SLIDESWITCH-BIG</td><td>SLIDESWITCH-BIG</td><td>BIGSWITCH</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>SODR_11</td><td></td><td>R-US_0204/7</td><td>0204/7</td><td>RESISTOR, American symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>SOD_LED</td><td>LED5MM</td><td>LED5MM</td><td>LED5MM</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>TC6</td><td>100nF</td><td>C-EU025-024X044</td><td>C025-024X044</td><td>CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>TC7</td><td>100nF</td><td>C-EU025-024X044</td><td>C025-024X044</td><td>CAPACITOR, European symbol</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>TEMP_SENSOR</td><td>M01SMDNS</td><td>M01SMDNS</td><td>1X01NS</td><td>Header 1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U$1</td><td>PRESET_LR</td><td>PRESET_LR</td><td>PRESET_LR</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U$2</td><td>USB(POWER)</td><td>USB(POWER)</td><td>USB(POWER)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U$3</td><td>MCP6001UT-E/OT</td><td>MCP6001UT-E/OT</td><td>SOT95P270X145-5N</td><td>1 MHz, Low-Power Op Amp</td><td></td><td>MCP6001UT-E/OT</td><td>1840893</td><td>84R5183</td><td>SOT23-5</td><td>Microchip</td></tr>
+<tr><td>U$4</td><td>APDS9008</td><td>APDS9008</td><td>APDS9008</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U1</td><td>LM4040A41IDBZT</td><td>LM4040A41IDBZT</td><td>SOT95P237X112-3N</td><td>PRECISION MICROPOWER SHUNT VOLTAGE REFERENCE</td><td></td><td>LM4040A41IDBZT</td><td>1755107</td><td>66K2443</td><td>3-SOT-23</td><td>TEXAS INSTRUMENTS</td></tr>
+</tbody></table>
+</p></body></html>
