@@ -1,0 +1,257 @@
+#define LCD_D7 10
+#define LCD_D6 9
+#define LCD_D5 8
+#define LCD_D4 7
+#define LCD_D3 -
+#define LCD_D2 -
+#define LCD_D1 -
+#define LCD_D0 -
+
+
+#define LCD_rs   7
+#define LCD_rw   -
+#define LCD_en   6
+
+int d[8];
+
+/* Function to convert a decinal number to binary number */
+void decimalToBinary(char ch) {
+    for(int k = 0; k <=7; k++)d[k] =0;
+    int i = 0;
+  
+    while(ch != 0) {
+        d[i] = ch%2;
+        ch = ch/2;
+        i++;
+    }
+    
+}
+
+
+void LCD_busy()
+{
+   //LCD_D7   = 1;           //Make D7th bit of LCD as i/p
+   pinMode(LCD_D7,INPUT);
+     //LCD_en   = 1;           //Make port pin as o/p
+     digitalWrite(LCD_en,HIGH);
+    // LCD_rs   = 0;           //Selected command register
+    digitalWrite(LCD_rs,LOW);
+    // LCD_rw   = 1;           //We are reading
+    digitalWrite(LCD_rw,HIGH);
+ 
+     while(digitalRead(LCD_D7)){          //read busy flag again and again till it becomes 0
+         //  LCD_en   = 0;     //Enable H->
+        digitalWrite(LCD_en,LOW);
+         //  LCD_en   = 1;
+         digitalWrite(LCD_en,HIGH);
+     }
+      pinMode(LCD_D7,OUTPUT);
+ 
+}
+
+LCD_INIT: 
+
+void LCD_init()
+{
+     //LCD_data = 0x38;     //Function set: 2 Line, 8-bit, 5x7 dots
+     digitalWrite(LCD_D7,LOW);
+     digitalWrite(LCD_D6,LOW);
+     digitalWrite(LCD_D5,HIGH);
+     digitalWrite(LCD_D4,HIGH);
+     digitalWrite(LCD_D3,HIGH);
+     digitalWrite(LCD_D2,LOW);
+     digitalWrite(LCD_D1,LOW);
+     digitalWrite(LCD_D0,LOW);
+     
+     //LCD_rs   = 0;        //Selected command register
+     digitalWrite(LCD_rs,LOW);
+     //LCD_rw   = 0;        //We are writing in data register
+     digitalWrite(LCD_rw,LOW);
+     //LCD_en   = 1;        //Enable H->
+     digitalWrite(LCD_en,HIGH);
+
+     //LCD_en   = 0;
+     digitalWrite(LCD_en,LOW);
+     LCD_busy();          //Wait for LCD to process the command
+   
+     //LCD_data = 0x0F;     //Display on, Curson blinking command
+   
+       digitalWrite(LCD_D7,LOW);
+     digitalWrite(LCD_D6,LOW);
+     digitalWrite(LCD_D5,LOW);
+     digitalWrite(LCD_D4,LOW);
+     digitalWrite(LCD_D3,HIGH);
+     digitalWrite(LCD_D2,HIGH);
+     digitalWrite(LCD_D1,HIGH);
+     digitalWrite(LCD_D0,HIGH);
+    // LCD_rs   = 0;        //Selected command register
+    digitalWrite(LCD_rs,LOW);
+    // LCD_rw   = 0;        //We are writing in data register
+    digitalWrite(LCD_rw,LOW);
+    // LCD_en   = 1;        //Enable H->
+    digitalWrite(LCD_en,HIGH);
+
+     //LCD_en   = 0;
+     digitalWrite(LCD_en,LOW);
+     LCD_busy();          //Wait for LCD to process the command
+   
+     //LCD_data = 0x01;     //Clear LCD
+        
+       digitalWrite(LCD_D7,LOW);
+     digitalWrite(LCD_D6,LOW);
+     digitalWrite(LCD_D5,LOW);
+     digitalWrite(LCD_D4,LOW);
+     digitalWrite(LCD_D3,LOW);
+     digitalWrite(LCD_D2,LOW);
+     digitalWrite(LCD_D1,LOW);
+     digitalWrite(LCD_D0,HIGH);
+     //LCD_rs   = 0;        //Selected command register
+     digitalWrite(LCD_rs,LOW);
+     //LCD_rw   = 0;        //We are writing in data register
+     digitalWrite(LCD_rw,LOW);
+     //LCD_en   = 1;        //Enable H->
+     digitalWrite(LCD_en,HIGH);
+
+     //LCD_en   = 0;
+     digitalWrite(LCD_en,LOW);
+    LCD_busy();          //Wait for LCD to process the command
+    
+    // LCD_data = 0x06;     //Entry mode, auto increment with no shift
+        
+       digitalWrite(LCD_D7,LOW);
+     digitalWrite(LCD_D6,LOW);
+     digitalWrite(LCD_D5,LOW);
+     digitalWrite(LCD_D4,LOW);
+     digitalWrite(LCD_D3,LOW);
+     digitalWrite(LCD_D2,HIGH);
+     digitalWrite(LCD_D1,HIGH);
+     digitalWrite(LCD_D0,LOW);
+    // LCD_rs   = 0;        //Selected command register
+    digitalWrite(LCD_rs,LOW);
+    // LCD_rw   = 0;        //We are writing in data register
+    digitalWrite(LCD_rw,LOW);
+    //LCD_en   = 1;        //Enable H->
+    digitalWrite(LCD_en,HIGH);
+
+    LCD_busy();
+    
+ 
+}
+
+void LCD_command(int d7,int d6,int d5,int d4,int d3,int d2,int d1,int d0)
+{
+     //LCD_data = var;      //Function set: 2 Line, 8-bit, 5x7 dots
+         digitalWrite(LCD_D7,d7);
+     digitalWrite(LCD_D6,d6);
+     digitalWrite(LCD_D5,d5);
+     digitalWrite(LCD_D4,d4);
+     digitalWrite(LCD_D3,d3);
+     digitalWrite(LCD_D2,d2);
+     digitalWrite(LCD_D1,d1);
+     digitalWrite(LCD_D0,d0);
+     //LCD_rs   = 0;        //Selected command register
+     digitalWrite(LCD_rs,LOW);
+     //LCD_rw   = 0;        //We are writing in instruction register
+         digitalWrite(LCD_rw,LOW);
+     //LCD_en   = 1;        //Enable H->
+          digitalWrite(LCD_en,HIGH);
+     //LCD_en   = 0;
+      digitalWrite(LCD_en,LOW);
+     LCD_busy();          //Wait for LCD to process the command
+}
+
+void LCD_senddata(int d7,int d6,int d5,int d4,int d3,int d2,int d1,int d0)
+{
+     //LCD_data = var;      //Function set: 2 Line, 8-bit, 5x7 dots
+        digitalWrite(LCD_D7,d7);
+     digitalWrite(LCD_D6,d6);
+     digitalWrite(LCD_D5,d5);
+     digitalWrite(LCD_D4,d4);
+     digitalWrite(LCD_D3,d3);
+     digitalWrite(LCD_D2,d2);
+     digitalWrite(LCD_D1,d1);
+     digitalWrite(LCD_D0,d0);
+    // LCD_rs   = 1;        //Selected data register
+     digitalWrite(LCD_rs,HIGH);
+    // LCD_rw   = 0;        //We are writing
+      digitalWrite(LCD_rw,LOW);
+    // LCD_en   = 1;        //Enable H->
+      digitalWrite(LCD_en,HIGH);
+    // LCD_en   = 0;
+         digitalWrite(LCD_en,LOW);
+     LCD_busy();          //Wait for LCD to process the command
+}
+
+void sendChar(char ch)
+{
+  decimalToBinary(ch);
+  LCD_senddata(d[7],d[6],d[5],d[4],d[3],d[2],d[1],d[0]);
+  Serial.print(d[7]);
+Serial.print(d[6]);
+Serial.print(d[5]);
+Serial.print(d[4]);
+Serial.print(d[3]);
+Serial.print(d[2]);
+Serial.print(d[1]);
+Serial.println(d[0]);
+}
+
+void LCD_sendstring(char var[16])
+{    int j=0;
+     while(var[j])              //till string ends
+       {
+        sendChar(var[j]);  //send characters one by one
+        j++;
+        Serial.print(var[j]);
+       }
+}
+
+/*void LCD_sendstring(unsigned char *var)
+{
+     while(*var)              //till string ends
+       LCD_senddata(*var++);  //send characters one by one
+}*/
+
+void LCD_build(){
+  LCD_command(0,1,0,0,1,0,0,0);       //Load the location where we want to store
+  LCD_senddata(0,0,0,0,0,1,0,0);      //Load row 1 data
+  LCD_senddata(0,0,0,0,1,1,1,0);      //Load row 2 data
+  LCD_senddata(0,0,0,0,1,1,1,0);      //Load row 3 data
+  LCD_senddata(0,0,0,0,1,1,1,0);      //Load row 4 data
+  LCD_senddata(0,0,0,1,1,1,1,1);      //Load row 5 data
+  LCD_senddata(0,0,0,0,0,0,0,0);      //Load row 6 data
+  LCD_senddata(0,0,0,0,0,1,0,0);      //Load row 7 data
+  LCD_senddata(0,0,0,0,0,0,0,0);      //Load row 8 data
+}
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(LCD_rs,OUTPUT);
+  pinMode(LCD_en,OUTPUT);
+  pinMode(LCD_D7,OUTPUT);
+  pinMode(LCD_D6,OUTPUT);
+  pinMode(LCD_D5,OUTPUT);
+  pinMode(LCD_D4,OUTPUT);
+  pinMode(LCD_D3,OUTPUT);
+  pinMode(LCD_D2,OUTPUT);
+  pinMode(LCD_D1,OUTPUT);
+  pinMode(LCD_D0,OUTPUT);
+  pinMode(LCD_rw,OUTPUT);
+  LCD_init();
+  //LCD_senddata(0,1,0,0,0,0,0,1);
+  //sendChar('A');
+  char ch[16] = "Work is Done !";
+  LCD_sendstring(ch);
+//sendChar('$');
+LCD_build();
+LCD_senddata(0,1,0,0,1,0,0,0);
+LCD_init();
+LCD_senddata(0,0,0,0,1,0,0,1);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+}

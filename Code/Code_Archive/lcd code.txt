@@ -1,0 +1,186 @@
+
+
+LCD_BUSY:PUSH PSW
+		 MVI A,82H		;Make D7th bit of LCD as i/p
+		 OUT 03H
+		 MVI A,01H		;//LCD_en   = 1  Make port pin as o/p
+		 OUT 03H
+		 MVI A,02H		;// LCD_rs   = 0	Selected command register
+		 OUT 03H
+		 MVI A,05H		;// LCD_rw   = 1	We are reading
+		 OUT 03H
+LOOP1:	 IN 01H			;//read busy flag again and again till it becomes 0
+		 RAL
+		 JNC CONTINUE
+		 MVI A,00H		;//LCD_en   = 0  Enable H->
+		 OUT 03H
+		 MVI A,01H		;//LCD_en   = 1
+		 OUT 03H
+		 JMP LOOP1
+CONTINUE:MVI A,80H		;Make D7th bit of LCD as O/p
+		 OUT 03H
+		 POP PSW
+		 RET
+
+
+
+LCD_INIT:PUSH PSW
+		 MVI A,80H		;Make D7th bit of LCD as O/p
+		 OUT 03H
+		 MVI A,38H		;Function set: 2 Line, 8-bit, 5x7 dots
+		 OUT 01H
+		 MVI A,02H		;Selected command register
+		 OUT 03H
+		 MVI A,04H		;We are writing in data register
+		 OUT 03H
+		 MVI A,01H		;Enable H->
+		 OUT 03H
+		 MVI A,00H		;LCD_en   = 0;
+		 OUT 03H
+		 CALL LCD_BUSY		;Wait for LCD to process the command
+		 MVI A,0FH
+		 OUT 01H		;Display on, Curson blinking command
+		 MVI A,02H		;// LCD_rs   = 0;        //Selected command register
+		 OUT 03H
+		 MVI A,04H		;/ LCD_rw   = 0;        //We are writing in data register
+		 OUT 03H
+		 MVI A,01H		;// LCD_en   = 1;        //Enable H->
+		 OUT 03H
+		 MVI A,00H		;//LCD_en   = 0;
+		 OUT 03H
+		 CALL LCD_BUSY		;Wait for LCD to process the command
+		 MVI A,01H		;Clear LCD
+		 OUT 01H
+		 MVI A,02H		;// LCD_rs   = 0;        //Selected command register
+		 OUT 03H
+		 MVI A,04H		;/ LCD_rw   = 0;        //We are writing in data register
+		 OUT 03H
+		 MVI A,01H		;// LCD_en   = 1;        //Enable H->
+		 OUT 03H
+		 MVI A,00H		;//LCD_en   = 0;
+		 OUT 03H
+		 CALL LCD_BUSY		;Wait for LCD to process the command
+		 MVI A,06H		;Entry mode, auto increment with no shift
+		 OUT 01H
+		 MVI A,02H		;// LCD_rs   = 0;        //Selected command register
+		 OUT 03H
+		 MVI A,04H		;/ LCD_rw   = 0;        //We are writing in data register
+		 OUT 03H
+		 MVI A,01H		;// LCD_en   = 1;        //Enable H->
+		 OUT 03H
+		 CALL LCD_BUSY		;Wait for LCD to process the command
+		 POP PSW
+		 RET
+		 
+
+
+LCD_COMMAND:PUSH PSW
+			MVI A,80H		;Make D7th bit of LCD as O/p
+			OUT 03H
+			MOV B,A		;COMMAND WILL ALWAYS BE PASSED THROUGH B
+			OUT 01H
+			MVI A,02H		;// LCD_rs   = 0;        //Selected command register
+			OUT 03H
+			MVI A,04H		;/ LCD_rw   = 0;        //We are writing in data register
+			OUT 03H
+			MVI A,01H		;// LCD_en   = 1;        //Enable H->
+			OUT 03H
+			MVI A,00H		;//LCD_en   = 0;
+			OUT 03H
+			CALL LCD_BUSY		;Wait for LCD to process the command
+			POP PSW
+			RET
+			
+
+LCD_SENDDATA:PUSH PSW
+			 MVI A,80H		;Make D7th bit of LCD as O/p
+			 OUT 03H
+			 MOV A,B
+			 OUT 01H
+			 MVI A,03H		;// LCD_rs   = 1;        //Selected command register
+			 OUT 03H
+			 MVI A,04H		;/ LCD_rw   = 0;        //We are writing in data register
+			 OUT 03H
+			 MVI A,01H		;// LCD_en   = 1;        //Enable H->
+			 OUT 03H
+			 MVI A,00H		;//LCD_en   = 0;
+			 OUT 03H
+			 CALL LCD_BUSY		;Wait for LCD to process the command
+			 POP PSW
+			 RET
+			 
+
+
+void sendChar(char ch)
+{
+  decimalToBinary(ch);
+  LCD_senddata(d[7],d[6],d[5],d[4],d[3],d[2],d[1],d[0]);
+  Serial.print(d[7]);
+Serial.print(d[6]);
+Serial.print(d[5]);
+Serial.print(d[4]);
+Serial.print(d[3]);
+Serial.print(d[2]);
+Serial.print(d[1]);
+Serial.println(d[0]);
+}
+
+void LCD_sendstring(char var[16])
+{    int j=0;
+     while(var[j])              //till string ends
+       {
+        sendChar(var[j]);  //send characters one by one
+        j++;
+        Serial.print(var[j]);
+       }
+}
+
+/*void LCD_sendstring(unsigned char *var)
+{
+     while(*var)              //till string ends
+       LCD_senddata(*var++);  //send characters one by one
+}*/
+
+void LCD_build(){
+  LCD_command(0,1,0,0,1,0,0,0);       //Load the location where we want to store
+  LCD_senddata(0,0,0,0,0,1,0,0);      //Load row 1 data
+  LCD_senddata(0,0,0,0,1,1,1,0);      //Load row 2 data
+  LCD_senddata(0,0,0,0,1,1,1,0);      //Load row 3 data
+  LCD_senddata(0,0,0,0,1,1,1,0);      //Load row 4 data
+  LCD_senddata(0,0,0,1,1,1,1,1);      //Load row 5 data
+  LCD_senddata(0,0,0,0,0,0,0,0);      //Load row 6 data
+  LCD_senddata(0,0,0,0,0,1,0,0);      //Load row 7 data
+  LCD_senddata(0,0,0,0,0,0,0,0);      //Load row 8 data
+}
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(LCD_rs,OUTPUT);
+  pinMode(LCD_en,OUTPUT);
+  pinMode(LCD_D7,OUTPUT);
+  pinMode(LCD_D6,OUTPUT);
+  pinMode(LCD_D5,OUTPUT);
+  pinMode(LCD_D4,OUTPUT);
+  pinMode(LCD_D3,OUTPUT);
+  pinMode(LCD_D2,OUTPUT);
+  pinMode(LCD_D1,OUTPUT);
+  pinMode(LCD_D0,OUTPUT);
+  pinMode(LCD_rw,OUTPUT);
+  LCD_init();
+  //LCD_senddata(0,1,0,0,0,0,0,1);
+  //sendChar('A');
+  char ch[16] = "Work is Done !";
+  LCD_sendstring(ch);
+//sendChar('$');
+LCD_build();
+LCD_senddata(0,1,0,0,1,0,0,0);
+LCD_init();
+LCD_senddata(0,0,0,0,1,0,0,1);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+}
